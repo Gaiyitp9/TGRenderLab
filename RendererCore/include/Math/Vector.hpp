@@ -7,14 +7,9 @@
 
 namespace LCH
 {
-	// 数学工具类
-	class Math
+	template <typename T, size_t N>
+	struct Vector
 	{
-	public:
-		template <typename T> 
-		inline static bool IsAligned(T value, size_t alignment)
-		{
-			return 0 == ((size_t)value & (alignment - 1));
-		}
+
 	};
 }
