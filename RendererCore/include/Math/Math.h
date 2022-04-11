@@ -5,9 +5,6 @@
 *****************************************************************/
 #pragma once
 
-#include <DirectXMath.h>
-#include <intrin.h>
-
 namespace LCH
 {
 	class Math
