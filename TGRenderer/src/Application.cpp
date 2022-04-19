@@ -11,6 +11,7 @@
 #include "Utility.h"
 #include "Diagnostics/WinAPIException.h"
 #include "../resource.h"
+#include <array>
 
 namespace LCH
 {

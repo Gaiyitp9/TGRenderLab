@@ -5,11 +5,17 @@
 *****************************************************************/
 #pragma once
 
-namespace LCH
+#include <immintrin.h>
+#include <array>
+
+namespace LCH::Math
 {
 	template <typename T, size_t N>
 	struct Vector
 	{
+	public:
 
+	private:
+		std::array<T, N> data;
 	};
 }
