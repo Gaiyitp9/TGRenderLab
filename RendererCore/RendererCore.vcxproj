@@ -166,6 +166,7 @@
     <ClInclude Include="include\Input\Keyboard.h" />
     <ClInclude Include="include\Input\KeyCode.h" />
     <ClInclude Include="include\Input\Mouse.h" />
+    <ClInclude Include="include\Math\Vector.hpp" />
     <ClInclude Include="include\Window.h" />
     <ClInclude Include="include\TimeSystem.h" />
     <ClInclude Include="include\Math\Math.h" />

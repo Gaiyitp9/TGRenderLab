@@ -72,6 +72,9 @@
     <ClInclude Include="include\Input\Mouse.h">
       <Filter>头文件\Input</Filter>
     </ClInclude>
+    <ClInclude Include="include\Math\Vector.hpp">
+      <Filter>头文件\Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Utility.cpp">
