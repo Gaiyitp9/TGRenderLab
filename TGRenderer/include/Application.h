@@ -26,6 +26,11 @@ namespace LCH
 		int Run();
 
 	private:
+		void TextEncodeTest();
+		void TimeTest();
+		void ArrayAlignmentTest();
+
+	private:
 		std::locale locale;		// 语言区域
 		TimeSystem timer;		// 时间系统
 

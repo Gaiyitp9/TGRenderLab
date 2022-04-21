@@ -5,10 +5,12 @@
 *****************************************************************/
 #pragma once
 
-namespace LCH
+#include <array>
+
+namespace LCH::Math
 {
-	// ÊýÑ§¹¤¾ßÀà
-	class Math
+	// æ•°å­¦å·¥å…·ç±»
+	class MathUtil
 	{
 	public:
 		template <typename T> 
@@ -17,4 +19,7 @@ namespace LCH
 			return 0 == ((size_t)value & (alignment - 1));
 		}
 	};
+
+	template<typename T, size_t N, size_t Alignment = 16>
+	class alignas(Alignment) aligned_array : public std::array<T, N> {};
 }

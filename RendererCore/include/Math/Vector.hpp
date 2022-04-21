@@ -6,16 +6,39 @@
 #pragma once
 
 #include <immintrin.h>
-#include <array>
+#include "MathUtil.h"
 
 namespace LCH::Math
 {
-	template <typename T, size_t N>
-	struct Vector
+	template<typename T>
+	struct simd_trait;
+
+	template<>
+	struct simd_trait<float>
 	{
+		static constexpr size_t Alignment = 16;
+	};
+
+	template<>
+	struct simd_trait<int>
+	{
+		static constexpr size_t Alignment = 16;
+	};
+
+	template<>
+	struct simd_trait<double>
+	{
+		static constexpr size_t Alignment = 32;
+	};
+
+	template <typename T, size_t N>
+	class Vector
+	{
+		using simd = simd_trait<T>;
 	public:
+		public Vector();
 
 	private:
-		std::array<T, N> data;
+		aligned_array<T, N, simd::Alignment> data;
 	};
 }

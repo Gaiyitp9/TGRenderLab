@@ -36,7 +36,7 @@
     <ClInclude Include="include\Utility.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="include\Math\Math.h">
+    <ClInclude Include="include\Math\MathUtil.h">
       <Filter>头文件\Math</Filter>
     </ClInclude>
     <ClInclude Include="include\Window.h">
