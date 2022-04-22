@@ -10,14 +10,39 @@
 
 namespace LCH::Math
 {
-	template <typename T, size_t N>
+	template<typename T, size_t N>
 	class Vector
 	{
 		using simd = simd_trait<T>;
+		
 	public:
-		public Vector();
+		Vector();
+
+		Vector operator+(const Vector& lhs, const Vector& rhs)
+		{
+			if constexpr (support_simd::value)
+			{
+
+			}
+			else
+			{
+
+			}
+		}
 
 	private:
 		aligned_array<T, N, simd::Alignment> data;
+	};
+
+	template<typename T>
+	class Vector<T, 4>
+	{
+		using simd = simd_trait<T>;
+
+	public:
+		Vector();
+
+	private:
+		aligned_array<T, 4, simd::Alignment> data;
 	};
 }

@@ -6,6 +6,7 @@
 #pragma once
 
 #include <array>
+#include <concepts>
 
 namespace LCH::Math
 {
@@ -13,8 +14,9 @@ namespace LCH::Math
 	class MathUtil
 	{
 	public:
-		template <typename T> 
-		inline static bool IsAligned(T value, size_t alignment)
+		// 地址是否满足对齐条件
+		template <typename T>
+		inline static bool IsAligned(T const* value, size_t alignment)
 		{
 			return 0 == ((size_t)value & (alignment - 1));
 		}
