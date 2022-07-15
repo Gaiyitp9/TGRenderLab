@@ -188,7 +188,7 @@ namespace LCH::Math
 	template<typename T>
 	inline Vector<T, 4> Vector<T, 4>::operator/(T a) const
 	{
-		if (Utility::Abs(a) < epsilon)
+		if (Abs(a) < epsilon)
 			return { 0 };
 
 		Vector res(a);
@@ -313,7 +313,7 @@ namespace LCH::Math
 	template<typename T>
 	inline Vector<T, 3> Vector<T, 3>::operator/(T a) const
 	{
-		if (Utility::Abs(a) < epsilon)
+		if (Abs(a) < epsilon)
 			return { 0 };
 
 		Vector res;
@@ -417,7 +417,7 @@ namespace LCH::Math
 	template<typename T>
 	inline Vector<T, 2> Vector<T, 2>::operator/(T a) const
 	{
-		if (Utility::Abs(a) < epsilon)
+		if (Abs(a) < epsilon)
 			return { 0 };
 
 		Vector res;
